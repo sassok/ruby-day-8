@@ -3,39 +3,45 @@
 	end 
 
 
-	def total(handle) # work taille de l'array
+	def total(handle) # Taille de la liste
 	 puts "Il y a #{handle.length} handle dans cette liste !"
+	 puts ""
 	end 
 
 
-	def short(handle) # work sors le handle le plus court
+	def short(handle) # Handle le plus court
 	 puts "Le handle le plus court de cette liste est #{handle.sort_by(&:length)[0]}"
+	 puts ""
 	end 
 
 
-	def char(handle) # work 
+	def char(handle) # Nb d'Handle contenant 5 caractères
 	 puts "Il y a #{handle.count {|x| x.size == 6}} handle contenant 5 caractères"
+	 puts ""
 	end
 
 
-	def uppercase (handle) # work sors le nombre de handle avec Maj après @
+	def uppercase (handle) # Le nombre de handle avec Maj après @
 	 puts "Il y a #{handle.grep(/@[A-Z]/).count} handle avec Maj après @"	
+	 puts ""
 	end 
 
 
-	def order(handle) # work sors la liste par ordre alphabétique    
+	def order(handle) # La liste par ordre alphabétique    
 	 handle3 = handle.sort
 	 puts handle3
+	 puts ""
 	end
 
 
-	def size(handle) # work sors la liste du plus petit au plus au plus long 
+	def size(handle) # La liste du plus petit au plus au plus long 
 	 handle2 = handle.sort_by(&:length)
 	 puts handle2
 	end
 
-	def find(handle) # work trouve handle @epenser et donne sa position
-	 puts "#{handle.index('@epenser')}"
+	def find(handle) # Trouve handle @epenser et donne sa position
+	puts ""
+	 puts "epenser se trouve à la #{handle.index('@epenser')} position"
 	end
 
 	def last(handle)
@@ -49,6 +55,7 @@
 	        i[count] += 1
 	    end
 	    end
+	    puts ""
 	    i.each{|key, value| puts "Il y a #{value} handle qui ont #{key} caractères" }
 	end
 
